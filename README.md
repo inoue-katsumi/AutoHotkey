@@ -1,6 +1,6 @@
 # AutoHotkey
 
-AutoHotkey is my *.ahk scripts repository to make Windows10 life efficient one.
+AutoHotkey is my .ahk scripts repository to make Windows10 life efficient one.
 
 ## Usage:
 
