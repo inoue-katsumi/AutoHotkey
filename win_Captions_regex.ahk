@@ -21,6 +21,9 @@ Loop, %windows%
         all_ids = %all_ids%%identifier1%,
     }
 }
-Clipboard := RTrim(all_ids, ",")
+if all_ids {
+  Clipboard := ""
+  Clipboard := RTrim(all_ids, ",")
+}
 
 ;ExitApp
