@@ -15,3 +15,5 @@ Scan all open windows(applications which have UI) and extracts regex match from 
 ## toast_regex.ahk:
 
 Scan notification area for 3 messages from Slack and extract regex match and store them on copy&paste buffer, aka clipboard. Requires Acc.ahk
+
+For screenshots, [please see my blog.](https://katsumiinoue.wordpress.com/2020/05/03/autohotkeyslack%e9%80%9a%e7%9f%a5grep/)
