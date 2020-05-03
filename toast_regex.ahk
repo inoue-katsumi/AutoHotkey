@@ -9,7 +9,7 @@ all_ids =
 SendInput #b
 SendInput {Up}
 SendInput {Space}
-sleep 1500
+sleep 2000
 
 ;Acc := Acc_ObjectFromPoint(child)
 ;hWnd := Acc_WindowFromObject(Acc)
@@ -32,8 +32,8 @@ Loop, 4
     ; This regex is for a ticketing system where ticket IDs are 6 digits.
     ; For JIRA, maybe someghing like [[:upper:]]{2,4}-[[:digit:]]{3,5}
     ; 
-    RegExMatch(message,"^.*\b([[:lower:]]{6})[^[:lower:]].*$",identifier)
-    ;        RegExMatch(message,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
+    ;RegExMatch(message,"^.*\b([[:lower:]]{6})[^[:lower:]].*$",identifier)
+    RegExMatch(message,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
     if identifier {
       ; %A_Space% at the end of the string didn't work.
       all_ids = %all_ids%%identifier1%,
