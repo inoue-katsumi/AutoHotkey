@@ -6,11 +6,9 @@
 !F6::
 all_ids =
 ;WinActivate, ahk_id 0x10114
-;SendInput {LWin down}b{LWin up}{Up}
-SendInput #b
-SendInput {Up}
-SendInput {Space}
-sleep 2500
+;SendInput {LWin down}b{LWin up}{Up}{Space}
+SendInput #a
+sleep 2000
 
 ;Acc := Acc_ObjectFromPoint(child)
 ;hWnd := Acc_WindowFromObject(Acc)
