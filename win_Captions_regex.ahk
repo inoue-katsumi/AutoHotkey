@@ -11,7 +11,8 @@ Loop, %windows%
 
     ; This regex is for a ticketing system where ticket IDs are 6 digits.
     ; For JIRA, maybe someghing like [[:upper:]]{2,4}-[[:digit:]]{3,5}
-    RegExMatch(title,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
+    ;RegExMatch(title,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
+    RegExMatch(title,"^.*\b([[:digit:]]{6})\b.*$",identifier)
     if identifier {
       ; %A_Space% at the end of the string didn't work.
       all_ids = %all_ids%%identifier1%,

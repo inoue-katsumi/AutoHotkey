@@ -8,7 +8,7 @@ all_ids =
 ;WinActivate, ahk_id 0x10114
 ;SendInput {LWin down}b{LWin up}{Up}{Space}
 SendInput #a
-sleep 2000
+sleep 3000
 
 ;Acc := Acc_ObjectFromPoint(child)
 ;hWnd := Acc_WindowFromObject(Acc)
@@ -31,12 +31,14 @@ Loop, 4
     ; This regex is for a ticketing system where ticket IDs are 6 digits.
     ; For JIRA, maybe someghing like [[:upper:]]{2,4}-[[:digit:]]{3,5}
     ; 
-    ;RegExMatch(message,"^.*\b([[:lower:]]{6})[^[:lower:]].*$",identifier)
-    RegExMatch(message,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
+    ;RegExMatch(message,"^.*\b([[:lower:]]{5})[^[:lower:]].*$",identifier)
+    ;RegExMatch(message,"^.*\b([[:digit:]]{6})[^[:digit:]].*$",identifier)
+    RegExMatch(message,"^.*\b([[:digit:]]{6})\b.*$",identifier)
     if identifier {
       ; %A_Space% at the end of the string didn't work.
       all_ids = %all_ids%%identifier1%,
     } else {
+      ;RegExMatch(message,"^.*[^[:lower:]]([[:lower:]]{5})[^[:lower:]].*$",identifier)
       RegExMatch(message,"^.*[^[:digit:]]([[:digit:]]{6})[^[:digit:]].*$",identifier)
       if identifier
         all_ids = %all_ids%%identifier1%,
