@@ -1,4 +1,4 @@
-F6::
+^F6::
 WinGet, windows, list
 ;Clipboard := ""
 all_ids =
@@ -25,5 +25,5 @@ if all_ids {
   Clipboard := ""
   Clipboard := RTrim(all_ids, ",")
 }
-
+Return
 ;ExitApp

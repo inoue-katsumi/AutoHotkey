@@ -2,14 +2,15 @@
 ;Class (NN) = Windows.UI.Core.CoreWindow
 ;Process = ShellExperienceHost.exe
 
-F7::
+;key binding doesn't work in Windows Terminal
+!F6::
 all_ids =
 ;WinActivate, ahk_id 0x10114
 ;SendInput {LWin down}b{LWin up}{Up}
 SendInput #b
 SendInput {Up}
 SendInput {Space}
-sleep 2000
+sleep 2500
 
 ;Acc := Acc_ObjectFromPoint(child)
 ;hWnd := Acc_WindowFromObject(Acc)
@@ -53,5 +54,5 @@ Loop, 4
   }
 ;  sleep 1000
 }
-
+Return
 ;ExitApp
